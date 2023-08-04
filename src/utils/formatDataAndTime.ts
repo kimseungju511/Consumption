@@ -5,10 +5,11 @@ export default function formatDateAndTime(dateString: string) {
   const day = date.getUTCDate().toString().padStart(2, '0');
   const hours = date.getUTCHours().toString().padStart(2, '0');
   const minutes = date.getUTCMinutes().toString().padStart(2, '0');
+  const second = date.getSeconds().toString().padStart(2,'0');
 
   const formattedDate = {
     date: `${year}년 ${month}월 ${day}일`,
-    time: `${hours}:${minutes}`,
+    time: `${hours}:${minutes}:${second}`,
   };
 
   return formattedDate;
